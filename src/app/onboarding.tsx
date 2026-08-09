@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { SymbolView } from "expo-symbols";
 import { Image, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -30,6 +31,8 @@ const SPEECH_BUBBLES = [
 ] as const;
 
 export default function OnboardingScreen() {
+  const router = useRouter();
+
   return (
     <SafeAreaView
       style={{ flex: 1, backgroundColor: colors.neutrals.background }}
@@ -81,6 +84,7 @@ export default function OnboardingScreen() {
           <Pressable
             accessibilityRole="button"
             accessibilityLabel="Get Started"
+            onPress={() => router.push("/sign-up")}
             className="min-h-14 items-center justify-center rounded-2xl bg-lingua-purple px-6"
             style={({ pressed }) => (pressed ? { opacity: 0.9 } : undefined)}
           >
