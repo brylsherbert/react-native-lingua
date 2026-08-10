@@ -44,6 +44,7 @@ function RootNavigator() {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ title: "Home" }} />
+      <Stack.Screen name="language" options={{ headerShown: false }} />
       <Stack.Screen name="onboarding" options={{ headerShown: false }} />
       <Stack.Screen name="sign-up" options={{ headerShown: false }} />
       <Stack.Screen name="sign-in" options={{ headerShown: false }} />
